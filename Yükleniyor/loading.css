@@ -1,0 +1,71 @@
+body{
+
+margin: 0;
+padding: 0;
+background: #34495e;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: "montserrat",sans-serif;
+
+}
+
+.yukleniyor{
+       
+width: 200px;
+height: 200px;
+box-sizing: border-box;
+border-radius: 50%;
+border-top: 10px solid #e74c3c;
+position: relative;
+animation: a1 2s linear infinite;
+}
+
+.yukleniyor::before,.yukleniyor::after{
+content: '';
+width: 200px;
+height: 200px;
+position: absolute;
+left: 0;
+top: -10px;
+box-sizing: border-box;
+border-radius: 50%;
+}
+.yukleniyor::before{
+border-top: 10px solid #e67e22;
+transform: rotate(120deg);
+
+}
+.yukleniyor::after{
+border-top: 10px solid #3498db;
+transform: rotate(240deg);
+
+}
+.yukleniyor span{
+position: absolute;
+width: 200px;
+height: 200px;
+color: #fff;
+text-align: center;
+line-height: 200px;
+animation: a2 2s linear infinite;
+}
+
+@keyframes a1{
+  to{
+  	transform: rotate(360deg);
+  }
+}
+@keyframes a2{
+ to{
+ 	transform: rotate(-360deg);
+  }
+
+ }
+footer {
+position: absolute;
+left: 50;
+bottom: 10px;
+color: #fff;
+}
